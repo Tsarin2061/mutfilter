@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 # Author: Lev Tsarin
 
@@ -27,7 +26,7 @@ for record  in vcf_reader:
             chromosome, coordinates = probe["Coordinates"].split(":")
             start,end = coordinates.split("-")
             if record.POS in range(int(start),(int(end))):
-                print(f"{record.CHROM}:{record.POS}  {record.REF} > {record.ALT}")
+                print(f"probe #{index+1} {record.CHROM}:{record.POS}  {record.REF} > {record.ALT}")
 
 
 
